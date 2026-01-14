@@ -1,5 +1,7 @@
 # Intucate Mini-Build: Diagnostic Agent to Summary Customizer Agent Flow
 
+## Link to Demo: https://drive.google.com/file/d/1h3YZxxRkuB_CHsbB0dOWUxTVDejKPmul/view?usp=sharing
+
 A full-stack application that computes Student Quality Index (SQI) from diagnostic test attempts and generates weighted concept rankings for a Summary Customizer Agent.
 
 ## 🎯 Features

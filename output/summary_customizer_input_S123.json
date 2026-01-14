@@ -1,0 +1,95 @@
+{
+  "student_id": "S123",
+  "overall_sqi": 75.7,
+  "topic_scores": [
+    {
+      "topic": "Borrowing Costs",
+      "sqi": 71.9
+    },
+    {
+      "topic": "Cash Flow Statements",
+      "sqi": 84.1
+    }
+  ],
+  "concept_scores": [
+    {
+      "topic": "Borrowing Costs",
+      "concept": "Definitions",
+      "sqi": 38.23
+    },
+    {
+      "topic": "Borrowing Costs",
+      "concept": "Recognition",
+      "sqi": 100
+    },
+    {
+      "topic": "Cash Flow Statements",
+      "concept": "Operating Activities",
+      "sqi": 100
+    },
+    {
+      "topic": "Cash Flow Statements",
+      "concept": "Investing Activities",
+      "sqi": 0
+    },
+    {
+      "topic": "Cash Flow Statements",
+      "concept": "Financing Activities",
+      "sqi": 100
+    }
+  ],
+  "ranked_concepts_for_summary": [
+    {
+      "topic": "Borrowing Costs",
+      "concept": "Definitions",
+      "weight": 1,
+      "reasons": [
+        "Wrong at least once",
+        "Medium importance (B)",
+        "Low diagnostic score"
+      ]
+    },
+    {
+      "topic": "Cash Flow Statements",
+      "concept": "Investing Activities",
+      "weight": 0.99,
+      "reasons": [
+        "Wrong at least once",
+        "Medium importance (B)",
+        "Low diagnostic score",
+        "Slow reading/response time"
+      ]
+    },
+    {
+      "topic": "Cash Flow Statements",
+      "concept": "Operating Activities",
+      "weight": 0.55,
+      "reasons": [
+        "High importance (A)",
+        "Fast reading/response time"
+      ]
+    },
+    {
+      "topic": "Borrowing Costs",
+      "concept": "Recognition",
+      "weight": 0.48,
+      "reasons": [
+        "High importance (A)"
+      ]
+    },
+    {
+      "topic": "Cash Flow Statements",
+      "concept": "Financing Activities",
+      "weight": 0.4,
+      "reasons": [
+        "Low importance (C)",
+        "Fast reading/response time"
+      ]
+    }
+  ],
+  "metadata": {
+    "diagnostic_prompt_version": "v1",
+    "computed_at": "2026-01-14 19:36:07",
+    "engine": "sqi-v0.1"
+  }
+}

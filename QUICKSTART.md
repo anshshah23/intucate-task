@@ -1,5 +1,7 @@
 # Quick Start Guide - Intucate SQI Project
 
+## Link to Demo: https://drive.google.com/file/d/1h3YZxxRkuB_CHsbB0dOWUxTVDejKPmul/view?usp=sharing
+
 ## ✅ Setup Complete!
 
 Your Intucate Diagnostic Agent to Summary Customizer Agent Flow is ready to use.
@@ -139,24 +141,6 @@ overall_sqi = clamp(raw_pct, 0, 100)
 3. ✅ Review the ranked concepts output
 4. ✅ Download/copy the JSON payload
 5. ✅ Run the test suite
-6. 📹 Record a 60-90 sec demo video showing:
-   - Login
-   - Data upload
-   - SQI computation
-   - Results review
-   - JSON export
-
-## 🎥 Demo Video Checklist
-
-Your demo should show:
-- [ ] Login with @intucate.com email
-- [ ] Paste/save diagnostic prompt (optional)
-- [ ] Upload student data (file or paste)
-- [ ] Click Compute SQI
-- [ ] Show overall SQI, topic scores, concept scores
-- [ ] Show ranked concepts with weights
-- [ ] Download JSON output
-- [ ] (Bonus) Show Copy JSON feature
 
 ## 📦 Deliverables Checklist
 
@@ -170,8 +154,6 @@ Your demo should show:
 - [x] JSON export (download + copy)
 - [x] Unit tests
 - [x] Sample data included
-- [ ] Demo video (60-90 sec) - **Record this!**
-- [ ] Postman collection or /compute-sqi endpoint test
 
 ## 🌟 Project Highlights
 
@@ -181,15 +163,3 @@ Your demo should show:
 4. **Test Coverage** - Jest tests for all scoring scenarios
 5. **Developer Experience** - Hot reload, concurrent dev servers, clear project structure
 6. **Production Ready** - Build scripts, error handling, validation
-
----
-
-**🎉 Congratulations! Your Intucate SQI project is ready for submission!**
-
-Remember to:
-1. Record your demo video
-2. Push to GitHub
-3. Share repo link with team@intucate.com
-4. Test the /api/compute-sqi endpoint (optional Postman collection)
-
-Good luck! 🚀

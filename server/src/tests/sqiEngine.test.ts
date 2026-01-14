@@ -1,6 +1,6 @@
 import { describe, expect, test } from '@jest/globals';
-import { SQIEngine } from '../sqiEngine.js';
-import { StudentData } from '../types.js';
+import { SQIEngine } from '../sqiEngine';
+import { StudentData } from '../types';
 
 describe('SQI Engine', () => {
   const sampleData: StudentData = {
