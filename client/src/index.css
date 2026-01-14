@@ -1,0 +1,313 @@
+:root {
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
+    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
+    sans-serif;
+  line-height: 1.5;
+  font-weight: 400;
+
+  color-scheme: light dark;
+  color: rgba(255, 255, 255, 0.87);
+  background-color: #242424;
+
+  font-synthesis: none;
+  text-rendering: optimizeLegibility;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  margin: 0;
+  min-width: 320px;
+  min-height: 100vh;
+}
+
+#root {
+  max-width: 1280px;
+  margin: 0 auto;
+  padding: 2rem;
+}
+
+h1 {
+  font-size: 2.2em;
+  line-height: 1.1;
+  margin-bottom: 1rem;
+  color: #646cff;
+}
+
+h2 {
+  font-size: 1.5em;
+  margin: 1.5rem 0 0.75rem;
+  color: #535bf2;
+}
+
+h3 {
+  font-size: 1.2em;
+  margin: 1rem 0 0.5rem;
+}
+
+button {
+  border-radius: 8px;
+  border: 1px solid transparent;
+  padding: 0.6em 1.2em;
+  font-size: 1em;
+  font-weight: 500;
+  font-family: inherit;
+  background-color: #1a1a1a;
+  cursor: pointer;
+  transition: border-color 0.25s;
+}
+
+button:hover {
+  border-color: #646cff;
+}
+
+button:focus,
+button:focus-visible {
+  outline: 4px auto -webkit-focus-ring-color;
+}
+
+button.primary {
+  background-color: #646cff;
+  color: white;
+}
+
+button.primary:hover {
+  background-color: #535bf2;
+}
+
+button.secondary {
+  background-color: #535bf2;
+  color: white;
+  margin-left: 0.5rem;
+}
+
+button.secondary:hover {
+  background-color: #4144b8;
+}
+
+button.logout {
+  background-color: #f44336;
+  color: white;
+  margin-left: auto;
+}
+
+button.logout:hover {
+  background-color: #d32f2f;
+}
+
+input,
+textarea {
+  border-radius: 4px;
+  border: 1px solid #ccc;
+  padding: 0.5em;
+  font-size: 1em;
+  font-family: inherit;
+  background-color: #1a1a1a;
+  color: white;
+}
+
+input:focus,
+textarea:focus {
+  outline: none;
+  border-color: #646cff;
+}
+
+.login-container {
+  max-width: 400px;
+  margin: 100px auto;
+  padding: 2rem;
+  border: 1px solid #333;
+  border-radius: 8px;
+  background-color: #1a1a1a;
+}
+
+.login-form {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+
+.form-group {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+}
+
+.form-group label {
+  font-weight: 500;
+}
+
+.error-message {
+  color: #f44336;
+  font-size: 0.9em;
+}
+
+.success-message {
+  color: #4caf50;
+  font-size: 0.9em;
+}
+
+.header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 2rem;
+  padding-bottom: 1rem;
+  border-bottom: 1px solid #333;
+}
+
+.admin-section {
+  margin: 2rem 0;
+  padding: 1.5rem;
+  border: 1px solid #333;
+  border-radius: 8px;
+  background-color: #1a1a1a;
+}
+
+.textarea-large {
+  width: 100%;
+  min-height: 150px;
+  font-family: 'Courier New', monospace;
+  resize: vertical;
+}
+
+.button-group {
+  display: flex;
+  gap: 0.5rem;
+  margin-top: 1rem;
+}
+
+.json-input-container {
+  margin-top: 1rem;
+}
+
+.file-upload {
+  margin-top: 0.5rem;
+}
+
+.results-container {
+  margin-top: 2rem;
+  padding: 1.5rem;
+  border: 1px solid #4caf50;
+  border-radius: 8px;
+  background-color: #1a1a1a;
+}
+
+.metric {
+  margin: 0.5rem 0;
+  padding: 0.5rem;
+  background-color: #2a2a2a;
+  border-radius: 4px;
+}
+
+.metric-label {
+  font-weight: 500;
+  color: #888;
+}
+
+.metric-value {
+  font-size: 1.5em;
+  color: #646cff;
+  margin-left: 1rem;
+}
+
+.topic-scores,
+.concept-scores {
+  margin-top: 1rem;
+}
+
+.score-item {
+  display: flex;
+  justify-content: space-between;
+  padding: 0.5rem;
+  margin: 0.25rem 0;
+  background-color: #2a2a2a;
+  border-radius: 4px;
+}
+
+.ranked-concepts {
+  margin-top: 1rem;
+}
+
+.concept-card {
+  padding: 1rem;
+  margin: 0.5rem 0;
+  background-color: #2a2a2a;
+  border-radius: 4px;
+  border-left: 4px solid #646cff;
+}
+
+.concept-header {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 0.5rem;
+}
+
+.concept-weight {
+  font-size: 1.2em;
+  color: #4caf50;
+  font-weight: bold;
+}
+
+.concept-reasons {
+  margin-top: 0.5rem;
+  padding-left: 1rem;
+}
+
+.concept-reasons li {
+  margin: 0.25rem 0;
+  color: #888;
+}
+
+.json-output {
+  margin-top: 1rem;
+  padding: 1rem;
+  background-color: #0a0a0a;
+  border-radius: 4px;
+  overflow-x: auto;
+}
+
+.json-output pre {
+  margin: 0;
+  font-family: 'Courier New', monospace;
+  font-size: 0.9em;
+}
+
+@media (prefers-color-scheme: light) {
+  :root {
+    color: #213547;
+    background-color: #ffffff;
+  }
+  
+  button {
+    background-color: #f9f9f9;
+  }
+  
+  input,
+  textarea {
+    background-color: #ffffff;
+    color: #213547;
+  }
+  
+  .login-container,
+  .admin-section,
+  .results-container {
+    background-color: #f9f9f9;
+  }
+  
+  .metric,
+  .score-item,
+  .concept-card {
+    background-color: #efefef;
+  }
+  
+  .json-output {
+    background-color: #e8e8e8;
+  }
+}
