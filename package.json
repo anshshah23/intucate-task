@@ -1,0 +1,17 @@
+{
+  "name": "intucate-diagnostic-sqi",
+  "version": "1.0.0",
+  "description": "Diagnostic Agent to Summary Customizer Agent Flow",
+  "type": "module",
+  "scripts": {
+    "dev": "concurrently \"npm run dev:client\" \"npm run dev:server\"",
+    "dev:client": "cd client && npm run dev",
+    "dev:server": "cd server && npm run dev",
+    "build": "cd client && npm run build",
+    "test": "cd server && npm test",
+    "install:all": "npm install && cd client && npm install && cd ../server && npm install"
+  },
+  "devDependencies": {
+    "concurrently": "^8.2.2"
+  }
+}

@@ -1,0 +1,120 @@
+{
+  "info": {
+    "name": "Intucate SQI API",
+    "description": "API endpoints for the Intucate Diagnostic Agent SQI system",
+    "schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+  },
+  "item": [
+    {
+      "name": "Save Diagnostic Prompt",
+      "request": {
+        "method": "POST",
+        "header": [
+          {
+            "key": "Content-Type",
+            "value": "application/json"
+          }
+        ],
+        "body": {
+          "mode": "raw",
+          "raw": "{\n  \"prompt\": \"You are a diagnostic agent analyzing student performance. Provide detailed feedback on areas of weakness and strength.\"\n}"
+        },
+        "url": {
+          "raw": "http://localhost:3000/api/prompt",
+          "protocol": "http",
+          "host": ["localhost"],
+          "port": "3000",
+          "path": ["api", "prompt"]
+        },
+        "description": "Save the diagnostic agent prompt to the server"
+      }
+    },
+    {
+      "name": "Get Diagnostic Prompt",
+      "request": {
+        "method": "GET",
+        "header": [],
+        "url": {
+          "raw": "http://localhost:3000/api/prompt",
+          "protocol": "http",
+          "host": ["localhost"],
+          "port": "3000",
+          "path": ["api", "prompt"]
+        },
+        "description": "Retrieve the saved diagnostic agent prompt"
+      }
+    },
+    {
+      "name": "Compute SQI - Sample Student",
+      "request": {
+        "method": "POST",
+        "header": [
+          {
+            "key": "Content-Type",
+            "value": "application/json"
+          }
+        ],
+        "body": {
+          "mode": "raw",
+          "raw": "{\n  \"student_id\": \"S123\",\n  \"attempts\": [\n    {\n      \"topic\": \"Borrowing Costs\",\n      \"concept\": \"Definitions\",\n      \"importance\": \"A\",\n      \"difficulty\": \"M\",\n      \"type\": \"Practical\",\n      \"case_based\": false,\n      \"correct\": true,\n      \"marks\": 2,\n      \"neg_marks\": 0.5,\n      \"expected_time_sec\": 90,\n      \"time_spent_sec\": 110,\n      \"marked_review\": false,\n      \"revisits\": 1\n    },\n    {\n      \"topic\": \"Borrowing Costs\",\n      \"concept\": \"Definitions\",\n      \"importance\": \"B\",\n      \"difficulty\": \"H\",\n      \"type\": \"Theory\",\n      \"case_based\": false,\n      \"correct\": false,\n      \"marks\": 3,\n      \"neg_marks\": 1.0,\n      \"expected_time_sec\": 120,\n      \"time_spent_sec\": 250,\n      \"marked_review\": true,\n      \"revisits\": 0\n    },\n    {\n      \"topic\": \"Cash Flow Statements\",\n      \"concept\": \"Operating Activities\",\n      \"importance\": \"A\",\n      \"difficulty\": \"M\",\n      \"type\": \"Practical\",\n      \"case_based\": false,\n      \"correct\": true,\n      \"marks\": 3,\n      \"neg_marks\": 0.75,\n      \"expected_time_sec\": 120,\n      \"time_spent_sec\": 100,\n      \"marked_review\": false,\n      \"revisits\": 0\n    }\n  ]\n}"
+        },
+        "url": {
+          "raw": "http://localhost:3000/api/compute-sqi",
+          "protocol": "http",
+          "host": ["localhost"],
+          "port": "3000",
+          "path": ["api", "compute-sqi"]
+        },
+        "description": "Compute SQI for student attempts and generate Summary Customizer Agent payload"
+      }
+    },
+    {
+      "name": "Compute SQI - All Correct",
+      "request": {
+        "method": "POST",
+        "header": [
+          {
+            "key": "Content-Type",
+            "value": "application/json"
+          }
+        ],
+        "body": {
+          "mode": "raw",
+          "raw": "{\n  \"student_id\": \"S456\",\n  \"attempts\": [\n    {\n      \"topic\": \"Financial Accounting\",\n      \"concept\": \"Basics\",\n      \"importance\": \"A\",\n      \"difficulty\": \"E\",\n      \"type\": \"Practical\",\n      \"case_based\": false,\n      \"correct\": true,\n      \"marks\": 5,\n      \"neg_marks\": 0,\n      \"expected_time_sec\": 60,\n      \"time_spent_sec\": 45,\n      \"marked_review\": false,\n      \"revisits\": 0\n    },\n    {\n      \"topic\": \"Financial Accounting\",\n      \"concept\": \"Advanced\",\n      \"importance\": \"A\",\n      \"difficulty\": \"H\",\n      \"type\": \"Practical\",\n      \"case_based\": true,\n      \"correct\": true,\n      \"marks\": 10,\n      \"neg_marks\": 0,\n      \"expected_time_sec\": 180,\n      \"time_spent_sec\": 150,\n      \"marked_review\": false,\n      \"revisits\": 0\n    }\n  ]\n}"
+        },
+        "url": {
+          "raw": "http://localhost:3000/api/compute-sqi",
+          "protocol": "http",
+          "host": ["localhost"],
+          "port": "3000",
+          "path": ["api", "compute-sqi"]
+        },
+        "description": "Test case with perfect score - all questions correct"
+      }
+    },
+    {
+      "name": "Compute SQI - All Wrong",
+      "request": {
+        "method": "POST",
+        "header": [
+          {
+            "key": "Content-Type",
+            "value": "application/json"
+          }
+        ],
+        "body": {
+          "mode": "raw",
+          "raw": "{\n  \"student_id\": \"S789\",\n  \"attempts\": [\n    {\n      \"topic\": \"Advanced Topics\",\n      \"concept\": \"Complex Calculations\",\n      \"importance\": \"C\",\n      \"difficulty\": \"H\",\n      \"type\": \"Theory\",\n      \"case_based\": false,\n      \"correct\": false,\n      \"marks\": 2,\n      \"neg_marks\": 0.5,\n      \"expected_time_sec\": 100,\n      \"time_spent_sec\": 300,\n      \"marked_review\": true,\n      \"revisits\": 3\n    },\n    {\n      \"topic\": \"Advanced Topics\",\n      \"concept\": \"Applications\",\n      \"importance\": \"B\",\n      \"difficulty\": \"M\",\n      \"type\": \"Practical\",\n      \"case_based\": false,\n      \"correct\": false,\n      \"marks\": 3,\n      \"neg_marks\": 0.75,\n      \"expected_time_sec\": 90,\n      \"time_spent_sec\": 200,\n      \"marked_review\": true,\n      \"revisits\": 1\n    }\n  ]\n}"
+        },
+        "url": {
+          "raw": "http://localhost:3000/api/compute-sqi",
+          "protocol": "http",
+          "host": ["localhost"],
+          "port": "3000",
+          "path": ["api", "compute-sqi"]
+        },
+        "description": "Test case with low score - all questions wrong with slow response times"
+      }
+    }
+  ]
+}
