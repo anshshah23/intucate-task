@@ -311,8 +311,8 @@ No environment variables required - everything runs locally.
 ## 📧 Contact
 
 For questions or issues:
-- Email: team@intucate.com
-- GitHub: [Your Repository Link]
+- Email: anshshah2303@gmail.com
+- GitHub: https://github.com/anshshah23/intucate-task
 
 ## 📄 License
 
